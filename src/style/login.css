@@ -1,0 +1,42 @@
+body .makeStyles-root-125 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .makeStyles-root-125 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  margin-top: 10%;
+}
+
+body .makeStyles-root-125 .form #standard-basic {
+  width: 20vw;
+}
+
+body .makeStyles-root-125 .form .form-item {
+  margin-top: 10%;
+}
+
+body .makeStyles-root-125 .form button {
+  width: 20%;
+}
+/*# sourceMappingURL=login.css.map */
