@@ -23,4 +23,22 @@ body {
       }
     }
   }
+  .dash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .card-container {
+      justify-content: center;
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      .card {
+        margin: 0 5%;
+        width: 40%;
+      }
+    }
+    .simple-select {
+      width: 40%;
+    }
+  }
 }

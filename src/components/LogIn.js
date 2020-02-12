@@ -7,7 +7,8 @@ import '../style/login.css';
 
 class LogIn extends Component {
   state = {
-    authorized: false
+    loggedIn: false,
+    online: false
   }
   allow = () => {
     this.setState({authorized: !this.state.authorized});
@@ -18,7 +19,7 @@ class LogIn extends Component {
       <div>
         <CssBaseline />
         <NavBar />
-        {this.state.authorized ? <Dash /> : <LoginForm allow={this.allow} />}
+        {this.props.authorized ? <Dash /> : <LoginForm allow={this.allow} />}
       </div>
     );
   }

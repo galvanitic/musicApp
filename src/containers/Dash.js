@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Dash from '../components/Dash'
+import Dashboard from '../components/Dashboard'
 import state from '../redux/state';
 
 const mapStateToProps = () => {
@@ -7,4 +7,4 @@ const mapStateToProps = () => {
     authorized: state.authorized
   }
 }
-export default connect(mapStateToProps)(Dash)
+export default connect(mapStateToProps)(Dashboard)

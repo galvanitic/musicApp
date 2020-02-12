@@ -39,4 +39,40 @@ body .makeStyles-root-125 .form .form-item {
 body .makeStyles-root-125 .form button {
   width: 20%;
 }
+
+body .dash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .dash .card-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .dash .card-container .card {
+  margin: 0 5%;
+  width: 40%;
+}
+
+body .dash .simple-select {
+  width: 40%;
+}
 /*# sourceMappingURL=login.css.map */
