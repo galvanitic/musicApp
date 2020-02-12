@@ -1,4 +1,4 @@
-body .makeStyles-root-125 {
+body .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,14 +6,13 @@ body .makeStyles-root-125 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-body .makeStyles-root-125 .form {
+body .form-container .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,20 +23,31 @@ body .makeStyles-root-125 .form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
+  width: 200px;
   margin-top: 10%;
 }
 
-body .makeStyles-root-125 .form #standard-basic {
+body .form-container .form #standard-basic {
   width: 20vw;
 }
 
-body .makeStyles-root-125 .form .form-item {
+body .form-container .form .form-item {
   margin-top: 10%;
 }
 
-body .makeStyles-root-125 .form button {
+body .form-container .form button {
   width: 20%;
+}
+
+body .btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 10%;
 }
 
 body .dash {

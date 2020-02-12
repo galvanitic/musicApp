@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux';
+// import { combineReducers } from 'redux';
 
-const authenticated = (state, action) => {
+export default (state, action) => {
   switch(action.type) {
     case 'AUTH':
       return {
@@ -12,4 +12,4 @@ const authenticated = (state, action) => {
   }
 }
 
-export default combineReducers({authenticated});
+// export default combineReducers({authenticated});

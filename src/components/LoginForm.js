@@ -17,11 +17,10 @@ export default function LoginForm() {
   const classes = useStyles();
   
   return (
-    <div className={classes.root}>
+    <div className='form-container'>
       <form className='form' noValidate autoComplete="off">
         <TextField className='form-item' id="standard-basic" label="Username *" />
-        <TextField className='form-item' id="standard-basic" label="Password *" />
-        <Button className='form-item' variant="contained" onClick={() => this.props.authenticate}>LOGIN</Button>
+        <TextField className='form-item' id="standard-basic" label="Password *" type='password' />
       </form>
     </div>
   );

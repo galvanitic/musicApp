@@ -3,15 +3,15 @@ import NavBar from '../containers/NavBar';
 import LoginForm from '../containers/LoginForm';
 import Dash from '../containers/Dash';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Button from '@material-ui/core/Button';
 import '../style/login.css';
 
 class LogIn extends Component {
   state = {
-    loggedIn: false,
     online: false
   }
   allow = () => {
-    this.setState({authorized: !this.state.authorized});
+    this.setState({online: !this.state.online});
   }
 
   render() {
@@ -19,7 +19,12 @@ class LogIn extends Component {
       <div>
         <CssBaseline />
         <NavBar />
-        {this.props.authenticated ? <Dash /> : <LoginForm allow={this.allow} />}
+        {this.state.online ? <Dash /> : <LoginForm />}
+        <div className='btnContainer'>
+          <Button className="login-btn" variant="contained" color="primary" onClick={this.allow}>
+            {this.state.online ? 'Log Out' : 'Log In'}
+          </Button>
+        </div>
       </div>
     );
   }
