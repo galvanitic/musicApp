@@ -1,10 +1,12 @@
 import { connect } from "react-redux";
 import NavBar from '../components/NavBar'
-import state from '../redux/state';
+import { authenticate, logOff } from "../actions/index";
 
-const mapStateToProps = () => {
-  return {
-    authorized: state.authorized
-  }
-}
-export default connect(mapStateToProps)(NavBar)
+const mapStateToProps = state => ({
+  ...state
+})
+const matchDispatchToProps = (dispatch) => ({
+  authenticate: () => dispatch(authenticate),
+  logOff: () => dispatch(logOff)
+})
+export default connect(mapStateToProps, matchDispatchToProps)(NavBar)

@@ -1,3 +1,3 @@
 export default {
-  authorized: true
+  authenticated: false
 };

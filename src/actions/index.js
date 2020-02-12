@@ -1,7 +1,14 @@
 export const authenticate = () => {
   console.log('user authenticated');
   return {
-    type: 'USER_AUTHENTICATED',
-    payload: Boolean
+    type: 'AUTH',
+    payload: true
+  }
+}
+export const logOff = () => {
+  console.log('user logged off');
+  return {
+    type: 'AUTH',
+    payload: false
   }
 }

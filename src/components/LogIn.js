@@ -19,7 +19,7 @@ class LogIn extends Component {
       <div>
         <CssBaseline />
         <NavBar />
-        {this.props.authorized ? <Dash /> : <LoginForm allow={this.allow} />}
+        {this.props.authenticated ? <Dash /> : <LoginForm allow={this.allow} />}
       </div>
     );
   }

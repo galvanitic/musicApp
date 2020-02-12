@@ -32,7 +32,6 @@ export default function NavBar() {
           <Typography variant="h6" className={classes.title}>
             Music
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>

@@ -21,7 +21,7 @@ export default function LoginForm() {
       <form className='form' noValidate autoComplete="off">
         <TextField className='form-item' id="standard-basic" label="Username *" />
         <TextField className='form-item' id="standard-basic" label="Password *" />
-        <Button className='form-item' variant="contained" onClick={() => this.props.authenticate(true)}>LOGIN</Button>
+        <Button className='form-item' variant="contained" onClick={() => this.props.authenticate}>LOGIN</Button>
       </form>
     </div>
   );

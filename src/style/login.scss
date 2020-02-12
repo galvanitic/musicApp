@@ -40,5 +40,10 @@ body {
     .simple-select {
       width: 40%;
     }
-  }
+    .alerts {
+      position: fixed;
+      bottom: 30px;
+      width: 50%;
+    }
+}
 }

@@ -75,4 +75,10 @@ body .dash .card-container .card {
 body .dash .simple-select {
   width: 40%;
 }
+
+body .dash .alerts {
+  position: fixed;
+  bottom: 30px;
+  width: 50%;
+}
 /*# sourceMappingURL=login.css.map */

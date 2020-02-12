@@ -27,8 +27,8 @@ const useStyles = makeStyles({
 class Dashboard extends Component {
   state = {
     online: true,
-    volume: null,
-    quality: null,
+    volume: 30,
+    quality: '',
   }
 
   handleChange = name => event => {
@@ -40,8 +40,8 @@ class Dashboard extends Component {
   handleSelectChange = event => {
     this.setState({quality: event.target.value})
   };
-  handleVolume = event => {
-    this.setState({volume: event.target.value})
+  handleVolume = (event, newVolume) => {
+    this.setState({volume: newVolume})
   }
 
   render() {
@@ -74,7 +74,8 @@ class Dashboard extends Component {
                 marks
                 min={0}
                 max={100}
-                onChange={this.handleChange}
+                value={this.state.volume}
+                onChange={this.handleVolume}
               />
             </CardContent>
           </Card>
@@ -87,7 +88,7 @@ class Dashboard extends Component {
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={this.state.age}
+                  value={this.state.quality}
                   onChange={this.handleSelectChange}
                 >
                   <MenuItem value={1}>Low</MenuItem>
@@ -99,9 +100,9 @@ class Dashboard extends Component {
           </Card>
         </div>
         <div className='alerts'>
-          {!this.state.online ? <Alert severity="warning">Your application is offline. You won't be able to share or stream music to other devices.</Alert> : null}
+          {!this.state.online ? <Alert className='slide' severity="warning">Your application is offline. You won't be able to share or stream music to other devices.</Alert> : null}
           {(this.state.volume > 80) ? <Alert severity="warning">Listening to music at a high volume could cause long-term hearing loss.</Alert> : null}
-          {!this.state.online ? <Alert severity="warning">Music quality is degraded. Increase quality if your connection allows it.</Alert> : null}
+          {(this.state.quality === 1) ? <Alert severity="warning">Music quality is degraded. Increase quality if your connection allows it.</Alert> : null}
         </div>
       </div>
     );

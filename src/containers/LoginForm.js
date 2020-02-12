@@ -1,15 +1,13 @@
 import { connect } from "react-redux";
 import LoginForm from '../components/LoginForm'
 import state from '../redux/state';
-import { authenticate } from "../actions/index";
-import { bindActionCreators } from "redux";
+import { authenticate, logOff } from "../actions/index";
 
-const mapStateToProps = () => {
-  return {
-    authorized: state.authorized
-  }
-}
-function matchDispatchToProps(dispatch){
-  return bindActionCreators({authenticate: authenticate}, dispatch)
-}
+const mapStateToProps = state => ({
+  ...state
+})
+const matchDispatchToProps = (dispatch) => ({
+  authenticate: () => dispatch(authenticate),
+  logOff: () => dispatch(logOff)
+})
 export default connect(mapStateToProps, matchDispatchToProps)(LoginForm)
